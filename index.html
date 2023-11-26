@@ -16,7 +16,6 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
@@ -36,11 +35,88 @@
             <img src="Images/user.png">
           </div>
           <div class="about-col-2">
-            <h1>About Me</h1>
+            <h1 class="sub-title">About Me</h1>
+            <p>My name is <strong>Letlhogonolo Chauke</strong>, i'm a BSc Mathematical Science graduate at
+              Sefako Makgatho Health Sciences University(SMU) majoring in Computer Science & Applied 
+              Mathematics. I'm currently a full-stack developer at <strong>InternCareer</strong> developing
+              projects with web technologies like HTML, CSS, JavaScript, MERN stack(MongoDB, Express.js,
+              React.js & Node.js) & RESTful API development.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Java & Java Swing</span><br>Desktop Application</li>
+                <li><span>MySQL & MongoDB</span><br>Database development & Design</li>
+                <li><span>HTML, CSS & JavaScript</span><br>Web Development</li>
+                <li><span>React.js, Express.js & Node.js</span><br>Web App Development</li>
+                <li><span>Git & GitHub</span><br>Version Control</li>
+                <li><span>Python</span><br>Data Analytics</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>May 2023 - November 2023</span><br>Mathematics Tutor at SMU</li>
+                <li><span>November 2023 - December 2023</span><br>Web Developer intern at InternCareer</li>
+                
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>Jan 2016 - December 2018</span><br>High School at Lethabong Secondary School</li>
+                <li><span>Feb 2019 - July 2023</span><br>Bachelor's Degree at Sefako Makgatho Health Sciences University</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!------------------------Portfolio------------------------>
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="Images/work-1.png">
+          </div>
+
+          <div class="work">
+            <img src="Images/work-2.png">
+          </div>
+
+          <div class="work">
+            <img src="Images/work-3.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      const opentab = tabname => {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
 
