@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio Website</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
     <link rel="stylesheet" href="style.css">
   </head>
 
@@ -15,12 +15,14 @@
       <div class="container">
         <nav>
           <img src="Images/logo.png" class="logo">
-          <ul>
+          <ul id="sidemenu">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Portfolio</a></li>
             <li><a href="#">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"></i>
           </ul>
+          <i class="fas fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Full-Stack Developer</p>
@@ -95,7 +97,7 @@
               <p>The application helps hotel admins to be able to help users with
                 administrative tasks like booking a room, checking out and etc.
               </p>
-              <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+              <a href="https://github.com/LETLHOGONOLO24/Phumula-Hotel.git"><i class="fa fa-external-link" aria-hidden="true"></i></a>
             </div>
           </div>
 
@@ -104,25 +106,53 @@
 
             <div class="layer">
               <h3>Desktop Application</h3>
-              <p>The application helps hotel admins to be able to help users with
-                administrative tasks like booking a room, checking out and etc.
+              <p>The application helps users pay and be able to see their electricity
+                bills plus it has a payment gateway.
               </p>
-              <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+              <a href="https://github.com/LETLHOGONOLO24/Electricity-Billing-System.git"><i class="fa fa-external-link" aria-hidden="true"></i></a>
             </div>
-          </div>
           </div>
 
           <div class="work">
             <img src="Images/work-3.png">
 
             <div class="layer">
-              <h3>Desktop Application</h3>
-              <p>The application helps hotel admins to be able to help users with
-                administrative tasks like booking a room, checking out and etc.
+              <h3>E-commerce website</h3>
+              <p>The website is for people who want to buy clothes both genders at 
+                a discounted price.
               </p>
-              <a href="#"><i class="fa fa-external-link" aria-hidden="true"></i></a>
+              <a href="https://tjaro.000webhostapp.com"><i class="fa fa-external-link" aria-hidden="true"></i></a>
             </div>
           </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+      </div>
+    </div>
+
+    <!---------------------------- Contact --------------------------------->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fas fa-paper-plane"></i>Pitroschauke24@gmail.com</p>
+            <p><i class="fas fa-phone-square-alt"></i>081 715 9963</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/letlhogonolo-chauke-4b5a40243"><i class="fab fa-linkedin-in"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+            </div>
+            <a href="Images/Resume.pdf" download class="btn btn2">Download CV</a>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
           </div>
         </div>
       </div>
@@ -143,6 +173,18 @@
 
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      const openmenu = () => {
+        sidemenu.style.right = "0";
+      }
+
+      const closemenu = () => {
+        sidemenu.style.right = "-200px";
       }
     </script>
   </body>
